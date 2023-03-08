@@ -1,4 +1,5 @@
 import redLine
+import yellowLine
 
 
 def select():
@@ -29,6 +30,6 @@ def select():
     elif choice == "7":
         print("Orange Line")
     elif choice == "8":
-        print("Yellow Line")
+        yellowLine.yellowline()
     else:
         print("Please select a valid Station")
