@@ -4,10 +4,10 @@ import json
 import key
 
 
-def call():
-    map_id = 40540
+def call(map_id):
     api_key = key.key
-    api_url = f"https://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key={api_key}&mapid={map_id}&max=2&outputType=JSON"
+    api_url = f"https://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=" \
+              f"{api_key}&mapid={map_id}&max=2&outputType=JSON"
     response = requests.get(api_url)
     data = json.loads(response.content)
     train = data['ctatt']['eta'][0]
@@ -19,4 +19,5 @@ def call():
     minutes = int((time_till_arrival % 3600) // 60)
     seconds = int(time_till_arrival % 60)
     print(
-        f"Next train arriving at {station} towards {dest} is in {hours} hour(s), {minutes} minute(s), {seconds} second(s).")
+        f"Next train arriving at {station} towards {dest} is in {hours} hour(s), "
+        f"{minutes} minute(s), {seconds} second(s).")
