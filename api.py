@@ -1,8 +1,9 @@
-
 from datetime import datetime
 import requests
 import json
 import key
+
+
 def call():
     map_id = 40540
     api_key = key.key
@@ -13,9 +14,9 @@ def call():
     station = data['ctatt']['eta'][0]['staNm']
     dest = data['ctatt']['eta'][0]['destNm']
     arrival_time = datetime.strptime(train['arrT'], '%Y-%m-%dT%H:%M:%S')
-    timetillarival = (arrival_time - datetime.now()).total_seconds()
-    hours = int(timetillarival // 3600)
-    minutes = int((timetillarival % 3600) // 60)
-    seconds = int(timetillarival % 60)
-    print(f"Next train arriving at {station} towards {dest} is in {hours} hour(s), {minutes} minute(s), {seconds} second(s).")
-
+    time_till_arrival = (arrival_time - datetime.now()).total_seconds()
+    hours = int(time_till_arrival // 3600)
+    minutes = int((time_till_arrival % 3600) // 60)
+    seconds = int(time_till_arrival % 60)
+    print(
+        f"Next train arriving at {station} towards {dest} is in {hours} hour(s), {minutes} minute(s), {seconds} second(s).")
