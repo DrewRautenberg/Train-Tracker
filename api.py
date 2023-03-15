@@ -28,5 +28,4 @@ def call(map_id):
             print(
                 f"Next train arriving at {station} towards {dest} is in {hours} hour(s), "
                 f"{minutes} minute(s), {seconds} second(s).")
-
         i += 1
