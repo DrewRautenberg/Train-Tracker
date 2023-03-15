@@ -175,4 +175,26 @@ purpleLine = {
     "State / Lake": "40260",
     "Clark / Lake": "40380",
 }
-
+pinkLine = {
+    "54th / Cermak": "40580",
+    "Cicero": "40420",
+    "Kostner": "40600",
+    "Pulaski": "40150",
+    "Central Park": "40780",
+    "Kedzie": "41040",
+    "California": "40440",
+    "Western": "40740",
+    "Damen": "40210",
+    "18th": "40830",
+    "Polk": "41030",
+    "Ashland": "40170",
+    "Morgan": "41510",
+    "Clark / Lake": "40380",
+    "State / Lake": "40260",
+    "Washington / Wabash": "41700",
+    "Adams / Wabash": "40680",
+    "Harold Washington Library - State / Van Buren": "40850",
+    "LaSalle / Van Buren": "40160",
+    "Quincy": "40040",
+    "Washington / Wells": "40730",
+}
