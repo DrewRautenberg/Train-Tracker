@@ -33,3 +33,5 @@ def select():
         api.stationSelection(stations.yellowLine)
     else:
         print("Please select a valid Station")
+
+select()
