@@ -1,6 +1,5 @@
-import redLine
-import yellowLine
-import orangeLine
+import api
+import stations
 
 
 def select():
@@ -17,7 +16,7 @@ def select():
     choice = input("Enter your choice: ")
 
     if choice == "1":
-        redLine.redline()
+        api.stationSelection(stations.redLine)
     elif choice == "2":
         print("Blue Line")
     elif choice == "3":
@@ -29,8 +28,8 @@ def select():
     elif choice == "6":
         print("Pink Line")
     elif choice == "7":
-        orangeLine.orangeline()
+        api.stationSelection(stations.orangeLine)
     elif choice == "8":
-        yellowLine.yellowline()
+        api.stationSelection(stations.yellowLine)
     else:
         print("Please select a valid Station")

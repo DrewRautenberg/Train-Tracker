@@ -4,6 +4,28 @@ import json
 import key
 
 
+def stationSelection(stations):
+    # Print list of stations and their corresponding numbers
+    print("Please select a Station:")
+    for i, station in enumerate(stations, 1):
+        print(f"{i}. {station}")
+
+    # Prompt user for station choice
+    while True:
+        try:
+            choice = int(input("Enter your choice: "))
+            if choice not in range(1, len(stations) + 1):
+                raise ValueError
+            break
+        except ValueError:
+            print("Please enter a valid choice")
+
+    # Call api with the chosen station code
+    station_name = list(stations.keys())[choice-1]
+    station_code = stations[station_name]
+    call(station_code)
+
+
 def call(map_id):
     api_key = key.key
     max_results = 4
