@@ -29,7 +29,7 @@ def stationSelection(stations):
 def call(map_id):
     api_key = key.key
     max_results = 4
-    api_url = f"https://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=" \
+    api_url = f"http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=" \
               f"{api_key}&mapid={map_id}&max={max_results}&outputType=JSON"
     response = requests.get(api_url)
     data = json.loads(response.content)
