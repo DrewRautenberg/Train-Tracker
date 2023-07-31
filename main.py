@@ -32,7 +32,8 @@ def select():
     elif choice == "8":
         api.stationSelection(stations.yellowLine)
     else:
-        print("Please select a valid Station")
+        print("Invalid Selection")
+        select()
 
 
 select()
