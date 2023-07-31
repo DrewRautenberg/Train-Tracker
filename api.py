@@ -34,7 +34,7 @@ def call(map_id):
     response = requests.get(api_url)
     data = json.loads(response.content)
     i = 0
-    while i <= max_results - 1:
+    for train in data['ctatt']['eta']:
         train = data['ctatt']['eta'][i]
         station = data['ctatt']['eta'][i]['staNm']
         dest = data['ctatt']['eta'][i]['destNm']
