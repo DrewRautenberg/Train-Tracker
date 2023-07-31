@@ -33,12 +33,11 @@ def call(map_id):
               f"{api_key}&mapid={map_id}&max={max_results}&outputType=JSON"
     response = requests.get(api_url)
     data = json.loads(response.content)
-    i = 0
+
     for train in data['ctatt']['eta']:
-        train = data['ctatt']['eta'][i]
-        station = data['ctatt']['eta'][i]['staNm']
-        dest = data['ctatt']['eta'][i]['destNm']
-        is_due = data['ctatt']['eta'][i]['isApp']
+        station = train['staNm']
+        dest = train['destNm']
+        is_due = train['isApp']
         arrival_time = datetime.strptime(train['arrT'], '%Y-%m-%dT%H:%M:%S')
         time_till_arrival = (arrival_time - datetime.now()).total_seconds()
         hours = int(time_till_arrival // 3600)
@@ -50,4 +49,3 @@ def call(map_id):
             print(
                 f"Next train arriving at {station} towards {dest} is in {hours} hour(s), "
                 f"{minutes} minute(s), {seconds} second(s).")
-        i += 1
