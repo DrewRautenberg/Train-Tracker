@@ -31,7 +31,7 @@ def call(map_id):
     max_results = 6
     api_url = f"http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=" \
               f"{api_key}&mapid={map_id}&max={max_results}&outputType=JSON"
-    response = requests.get(api_url)
+    response = requests.get(api_url, timeout=30)
     data = json.loads(response.content)
 
     for train in data['ctatt']['eta']:
