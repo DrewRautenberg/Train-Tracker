@@ -39,6 +39,7 @@ def call(map_id):
         dest = train['destNm']
         is_due = train['isApp']
         run = train['rn']
+        is_delayed = train['isDly']
         arrival_time = datetime.strptime(train['arrT'], '%Y-%m-%dT%H:%M:%S')
         time_till_arrival = (arrival_time - datetime.now()).total_seconds()
         hours = int(time_till_arrival // 3600)
@@ -46,6 +47,8 @@ def call(map_id):
         seconds = int(time_till_arrival % 60)
         if is_due == "1":
             print(f"Next train arriving at {station} towards {dest} is due.")
+        elif is_delayed == "1":
+            print(f"Next train arriving at {station} towards {dest} is delayed.")
         else:
             print(
                 f"Next train arriving at {station} towards {dest} is run number {run} in {hours} hour(s), "
