@@ -51,5 +51,5 @@ def call(map_id):
             print(f"Next train arriving at {station} towards {dest} is delayed.")
         else:
             print(
-                f"Next train arriving at {station} towards {dest} is run number {run} in {hours} hour(s), "
-                f"{minutes} minute(s), {seconds} second(s).")
+                f"Next train arriving at {station} towards {dest} is run number {run} in "
+                f"{hours} hour(s), {minutes} minute(s), {seconds} second(s).")
