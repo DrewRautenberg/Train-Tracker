@@ -1,3 +1,4 @@
 /Pipfile.lock
 /key.py
 __pycache__
+.vscode
