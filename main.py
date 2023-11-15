@@ -1,8 +1,10 @@
+"""Prints line options and gets user input, calls api"""
 import api
 import stations
 
 
 def select():
+    """Prints line options and gets user input, calls api"""
     print("Please select a Line:")
     print("1. Red")
     print("2. Blue")
