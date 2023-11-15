@@ -1,3 +1,4 @@
+"""Module that querrys api and prints results"""
 from datetime import datetime
 import json
 import requests
@@ -5,6 +6,7 @@ import key
 
 
 def stationSelection(stations):
+    """Print station list and get user input"""
     # Print list of stations and their corresponding numbers
     print("Please select a Station:")
     for i, station in enumerate(stations, 1):
@@ -27,6 +29,7 @@ def stationSelection(stations):
 
 
 def call(map_id):
+    """Call api and print results"""
     api_key = key.key
     max_results = 6
     api_url = f"http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=" \
