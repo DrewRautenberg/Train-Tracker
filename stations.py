@@ -12,6 +12,7 @@ redLine = {
     "Addison": "41420",
     "Belmont": "41320",
     "Fullerton": "41220",
+    "North / Clyborn": "40650",
     "Clark / Division": "40630",
     "Chicago": "41450",
     "Grand": "40330",
